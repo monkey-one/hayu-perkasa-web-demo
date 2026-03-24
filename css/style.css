@@ -1741,7 +1741,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: span 1;
   }
   .projects-preview-grid .project-card {
-    height: 260px !important;
+    min-height: 260px !important;
   }
   .about-section { padding: var(--space-4xl) 0; }
   .testimonials-section { padding: var(--space-4xl) 0; }

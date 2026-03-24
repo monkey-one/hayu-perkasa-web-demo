@@ -210,7 +210,7 @@
       const grid = document.getElementById('projects-grid');
 
       grid.innerHTML = filtered.map((p, i) => `
-        <div class="project-card" style="height:${i === 0 ? '360' : '280'}px;" onclick="showProjectDetail(${p.id})">
+        <div class="project-card" style="min-height:280px;" onclick="showProjectDetail(${p.id})">
           <img src="${p.images[0]}" alt="${p.title}" loading="lazy">
           <div class="project-overlay">
             <span class="badge ${badgeCat[p.category]}" style="width:fit-content;margin-bottom:8px;">${p.category}</span>
@@ -290,7 +290,7 @@
         grid-column: span 1;
       }
       .projects-grid .project-card {
-        height: 260px !important;
+        min-height: 260px !important;
       }
     }
   </style>
