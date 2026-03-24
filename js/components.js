@@ -237,6 +237,19 @@ function initSmoothScroll() {
   });
 }
 
+// ---------- WA Inquiry Button Delegation ----------
+function initWAInquiry() {
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('.wa-inquiry-btn');
+    if (!btn) return;
+    var product = btn.getAttribute('data-product');
+    if (product) {
+      var msg = encodeURIComponent('Halo, saya tertarik dengan ' + product + '.');
+      window.open('https://wa.me/6281234166771?text=' + msg, '_blank', 'noopener');
+    }
+  });
+}
+
 // ---------- Initialize All ----------
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
@@ -244,6 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initSmoothScroll();
   initModals();
+  initWAInquiry();
 
   // Counter animation if stats exist
   if (document.querySelector('[data-target]')) {

@@ -215,7 +215,7 @@
             <div class="product-card-price">Rp 1.050 <small>/kg</small></div>
             <div class="product-card-actions">
               <a href="products.html" class="btn btn-outline-dark btn-sm">Detail</a>
-              <button class="btn btn-primary btn-sm" onclick="window.open('https://wa.me/6281234166771?text=Halo, saya tertarik dengan Bentonite 200 Mesh.','_blank')">Inquiry</button>
+              <button class="btn btn-primary btn-sm wa-inquiry-btn" data-product="Bentonite 200 Mesh">Inquiry</button>
             </div>
           </div>
         </div>
@@ -231,7 +231,7 @@
             <div class="product-card-price">Rp 950 <small>/kg</small></div>
             <div class="product-card-actions">
               <a href="products.html" class="btn btn-outline-dark btn-sm">Detail</a>
-              <button class="btn btn-primary btn-sm" onclick="window.open('https://wa.me/6281234166771?text=Halo, saya tertarik dengan Bentonite 100 Mesh.','_blank')">Inquiry</button>
+              <button class="btn btn-primary btn-sm wa-inquiry-btn" data-product="Bentonite 100 Mesh">Inquiry</button>
             </div>
           </div>
         </div>
@@ -247,7 +247,7 @@
             <div class="product-card-price">Rp 850 <small>/kg</small></div>
             <div class="product-card-actions">
               <a href="products.html" class="btn btn-outline-dark btn-sm">Detail</a>
-              <button class="btn btn-primary btn-sm" onclick="window.open('https://wa.me/6281234166771?text=Halo, saya tertarik dengan Zeolite 100 Mesh.','_blank')">Inquiry</button>
+              <button class="btn btn-primary btn-sm wa-inquiry-btn" data-product="Zeolite 100 Mesh">Inquiry</button>
             </div>
           </div>
         </div>
@@ -263,7 +263,7 @@
             <div class="product-card-price">Rp 350 <small>/kg</small></div>
             <div class="product-card-actions">
               <a href="products.html" class="btn btn-outline-dark btn-sm">Detail</a>
-              <button class="btn btn-primary btn-sm" onclick="window.open('https://wa.me/6281234166771?text=Halo, saya tertarik dengan Dolomite 100 Mesh.','_blank')">Inquiry</button>
+              <button class="btn btn-primary btn-sm wa-inquiry-btn" data-product="Dolomite 100 Mesh">Inquiry</button>
             </div>
           </div>
         </div>
@@ -279,7 +279,7 @@
             <div class="product-card-price">Rp 475 <small>/kg</small></div>
             <div class="product-card-actions">
               <a href="products.html" class="btn btn-outline-dark btn-sm">Detail</a>
-              <button class="btn btn-primary btn-sm" onclick="window.open('https://wa.me/6281234166771?text=Halo, saya tertarik dengan Calcium CaCO3 200 Mesh.','_blank')">Inquiry</button>
+              <button class="btn btn-primary btn-sm wa-inquiry-btn" data-product="Calcium CaCO3 200 Mesh">Inquiry</button>
             </div>
           </div>
         </div>
@@ -295,7 +295,7 @@
             <div class="product-card-price">Rp 310 <small>/kg</small></div>
             <div class="product-card-actions">
               <a href="products.html" class="btn btn-outline-dark btn-sm">Detail</a>
-              <button class="btn btn-primary btn-sm" onclick="window.open('https://wa.me/6281234166771?text=Halo, saya tertarik dengan Meniran.','_blank')">Inquiry</button>
+              <button class="btn btn-primary btn-sm wa-inquiry-btn" data-product="Meniran">Inquiry</button>
             </div>
           </div>
         </div>
@@ -362,16 +362,6 @@
             <div class="project-meta">
               <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               Gunung Kidul, 2023
-            </div>
-          </div>
-        </div>
-        <div class="project-card" style="grid-area:f;">
-          <img src="https://picsum.photos/400/300?random=36" alt="Supply Dolomit" loading="lazy">
-          <div class="project-overlay">
-            <h3>Supply Dolomit Pertanian</h3>
-            <div class="project-meta">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Magelang, 2022
             </div>
           </div>
         </div>
@@ -506,45 +496,5 @@
   </footer>
 
   <script src="js/components.js"></script>
-  <style>
-    /* Projects preview masonry grid */
-    .projects-preview-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 320px 240px;
-      gap: 16px;
-      grid-template-areas:
-        "a a b"
-        "d e f";
-    }
-    .projects-preview-grid .project-card { min-height: 0; }
-    .projects-preview-grid .project-card:nth-child(3) { grid-area: b; }
-    .projects-preview-grid .project-card:nth-child(4) { grid-area: d; }
-    .projects-preview-grid .project-card:nth-child(5) { grid-area: e; }
-    .projects-preview-grid .project-card:nth-child(6) { grid-area: f; }
-
-    @media (max-width: 768px) {
-      .projects-preview-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: none;
-      }
-      .projects-preview-grid .project-card {
-        grid-area: auto !important;
-        height: 260px;
-      }
-    }
-
-    @media (max-width: 1024px) and (min-width: 769px) {
-      .projects-preview-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 280px 240px 240px;
-        grid-template-areas:
-          "a a"
-          "b d"
-          "e f";
-      }
-    }
-  </style>
 </body>
 </html>
